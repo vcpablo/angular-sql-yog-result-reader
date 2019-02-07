@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-form-field class="field">
+    <textarea matInput placeholder="Paste SQLYog output here.." rows="30" [(ngModel)]="input"></textarea>
+  </mat-form-field>
+  
+  <button type="button" class="button" mat-stroked-button (click)="clear()">
+    <mat-icon class="icon">clear</mat-icon>
+    Clear
+  </button>
+  <button type="button" color="primary" class="button left" mat-raised-button (click)="process()">
+    <mat-icon class="icon">settings</mat-icon>
+    Process
+  </button>
+  
+</div>

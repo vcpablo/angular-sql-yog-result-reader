@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+}
+
+.card {
+  margin-bottom: 5px;
+}
+
+.error {
+  background-color: #f9cdcd;
+
+  .icon {
+    color: #d83434;
+  }
+}
+
+.warning {
+  background-color: #f9f5cd;
+
+  .icon {
+    color: #b3a500;
+  }
+}
+
+.message {
+  background-color: #cde6f9;
+
+  .icon {
+    color: #1389e4;
+  }
+}
+
+.query {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}

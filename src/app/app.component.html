@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1>
+    Angular SQLYog Schema Synchronization Result Reader
+  </h1>
+  <p>
+    Just paste your SQLYog schema synchronization output into the field below and click below
+  </p>
+  <app-sql-input class="flex" (output)="setOutput($event)" (cleared)="clear()"></app-sql-input>
+  <app-output class="flex" *ngIf="results.length > 0" [results]="results"></app-output>
+</div>
+
+
+

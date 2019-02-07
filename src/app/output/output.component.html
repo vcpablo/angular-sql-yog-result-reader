@@ -1,0 +1,25 @@
+<div class="container">
+  <mat-card 
+    [ngClass]="{'error': result.isError, 'warning': result.isWarning, 'message': result.isMessage}"
+    class="card" color="primary" *ngFor="let result of results">
+      <h3 class="query" *ngIf="result.isError">
+        <mat-icon class="icon">cancel</mat-icon> {{ result.error }}
+      </h3>
+      <h3 class="query" *ngIf="result.isWarning || result.isMessage">
+        <mat-icon class="icon">{{result.isWarning ? 'warning' : 'info' }}</mat-icon> {{ result.query }}
+      </h3>
+    <p *ngIf="result.isError">
+      <b>Query: </b> {{ result.query }}
+    </p>
+    
+    <p *ngIf="result.rows">
+      <b>Affected rows: </b> {{ result.rows }}
+    </p>
+    
+    <p>
+      <b>Execution time: </b> {{ result.executionTime }}
+      <br>
+      <b>Total time: </b> {{ result.totalTime }}
+    </p>
+  </mat-card>
+</div>
